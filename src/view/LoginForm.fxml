@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginFormAnchor" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="511.0" fitWidth="700.0" opacity="0.62" pickOnBounds="true">
+         <image>
+            <Image url="@assests/supermarket-g78f169e59_1920.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="511.0" opacity="0.61" stroke="#e73939" strokeType="INSIDE" width="700.0" />
+      <Pane fx:id="cashierPane" layoutX="183.0" layoutY="107.0" prefHeight="262.0" prefWidth="335.0" style="-fx-background-color: #4CB5F5;">
+         <children>
+            <TextField fx:id="txtUsername" layoutX="30.0" layoutY="37.0" prefHeight="34.0" prefWidth="276.0" promptText="Username" styleClass="textLabel" stylesheets="@assests/styls/FirstLogin.css" />
+            <PasswordField fx:id="txtPassword" layoutX="30.0" layoutY="105.0" prefHeight="34.0" prefWidth="276.0" promptText="Password" styleClass="textLabel" stylesheets="@assests/styls/FirstLogin.css" />
+            <Button fx:id="btnLogin" layoutX="27.0" layoutY="188.0" mnemonicParsing="false" onAction="#loginOnAction" onMouseEntered="#playMouseEntered" onMouseExited="#playMouseExited" prefHeight="30.0" prefWidth="276.0" style="-fx-background-color: #e73939;" styleClass="textLabel" stylesheets="@assests/styls/FirstLogin.css" text="Login" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" />
+            <Pane fx:id="administratotPane" opacity="0.82" prefHeight="294.0" prefWidth="330.0" style="-fx-background-color: #008080;" visible="false">
+               <children>
+                  <TextField fx:id="txtUsernameAt" layoutX="27.0" layoutY="82.0" prefHeight="34.0" prefWidth="276.0" promptText="Username" styleClass="textLabel" stylesheets="@assests/styls/FirstLogin.css" />
+                  <PasswordField fx:id="txtPasswordAt" layoutX="27.0" layoutY="154.0" prefHeight="34.0" prefWidth="276.0" promptText="Password" styleClass="textLabel" stylesheets="@assests/styls/FirstLogin.css" />
+                  <Button fx:id="btnLoginAt" layoutX="115.0" layoutY="224.0" mnemonicParsing="false" onAction="#loginOnActionAt" onMouseEntered="#playMouseEntered" onMouseExited="#playMouseExited" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #ffa500;" styleClass="textLabel" stylesheets="@assests/styls/FirstLogin.css" text="Login" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+               </children>
+            </Pane>
+         </children></Pane>
+      <Button fx:id="btnCashier" layoutX="366.0" layoutY="418.0" mnemonicParsing="false" onAction="#cashierOnAction" onMouseEntered="#caMouseEntered" onMouseExited="#caMouseExited" prefHeight="46.0" prefWidth="152.0" style="-fx-background-color: #cbb482;" styleClass="textLabel" stylesheets="@assests/styls/FirstLogin.css" text="Cashier Login">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font></Button>
+      <Button fx:id="btnAdministrator" layoutX="183.0" layoutY="418.0" mnemonicParsing="false" onAction="#AdministratorOnAction" onMouseEntered="#adMouseEntered" onMouseExited="#adMouseExited" prefHeight="46.0" prefWidth="152.0" style="-fx-background-color: #cbb482;" styleClass="textLabel" stylesheets="@assests/styls/FirstLogin.css" text="Administrator Login">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

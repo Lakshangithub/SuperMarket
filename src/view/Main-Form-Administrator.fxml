@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="administratorAnchor" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormAdministratorController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cbb7e1" height="500.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="700.0" />
+      <ImageView fitHeight="329.0" fitWidth="355.0" layoutX="186.0" layoutY="-115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/DashBordImage/output-onlinepngtools%20(1).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="188.0" layoutY="110.0" text="Super Market Management System" underline="true">
+         <font>
+            <Font name="Bodoni MT Bold" size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutX="44.0" layoutY="143.0" prefHeight="0.0" prefWidth="632.0" />
+      <Label fx:id="lblMenu" alignment="CENTER" layoutX="108.0" layoutY="411.0" prefHeight="32.0" prefWidth="504.0" text="Welcome" textAlignment="CENTER">
+         <font>
+            <Font name="Bodoni MT" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" layoutX="112.0" layoutY="443.0" prefHeight="17.0" prefWidth="497.0" text="Please select one of above main operations to proceed">
+         <font>
+            <Font name="Bodoni MT" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="btnBack" fitHeight="50.0" fitWidth="50.0" layoutX="46.0" layoutY="24.0" onMouseEntered="#backMouseEntered" onMouseExited="#backMouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/DashBordImage/th-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgItem" fitHeight="100.0" fitWidth="100.0" layoutX="58.0" layoutY="228.0" onMouseClicked="#imgMouseClicked" onMouseEntered="#imgMouseEnterAnimation" onMouseExited="#imgMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/DashBordImage/to-do.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgIncome" fitHeight="100.0" fitWidth="100.0" layoutX="217.0" layoutY="228.0" onMouseClicked="#imgMouseClicked" onMouseEntered="#imgMouseEnterAnimation" onMouseExited="#imgMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/DashBordImage/cash.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgMovableItem" fitHeight="100.0" fitWidth="100.0" layoutX="374.0" layoutY="228.0" onMouseClicked="#imgMouseClicked" onMouseEntered="#imgMouseEnterAnimation" onMouseExited="#imgMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/DashBordImage/items.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgLeastItem" fitHeight="100.0" fitWidth="100.0" layoutX="541.0" layoutY="228.0" onMouseClicked="#imgMouseClicked" onMouseEntered="#imgMouseEnterAnimation" onMouseExited="#imgMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/DashBordImage/delete-item.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="itemAnchor" prefHeight="930.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageItemFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebc1ad" height="930.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="24.0" layoutY="24.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@assests/CustomerImage/homepage.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnAddNewItem" layoutX="581.0" layoutY="26.0" mnemonicParsing="false" onAction="#AddNewItemOnAction" prefHeight="41.0" prefWidth="159.0" style="-fx-background-color: #00a800;" styleClass="textPane" stylesheets="@assests/styls/FirstLogin.css" text="+ New Item" textFill="WHITE" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="26.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="68.0" layoutY="125.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane" stylesheets="@assests/styls/FirstLogin.css">
+         <children>
+            <TextField fx:id="txtItemCode" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="656.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" stylesheets="@assests/styls/FirstLogin.css" text="Item Code" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="68.0" layoutY="197.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane" stylesheets="@assests/styls/FirstLogin.css">
+         <children>
+            <TextField fx:id="txtDescription" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="656.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" stylesheets="@assests/styls/FirstLogin.css" text="Description" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="68.0" layoutY="267.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane" stylesheets="@assests/styls/FirstLogin.css">
+         <children>
+            <TextField fx:id="txtPackSize" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="656.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" stylesheets="@assests/styls/FirstLogin.css" text="Pack Size" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="68.0" layoutY="420.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane" stylesheets="@assests/styls/FirstLogin.css">
+         <children>
+            <TextField fx:id="txtQtyOnHand" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="656.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" stylesheets="@assests/styls/FirstLogin.css" text="Qty On  Hand" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="68.0" layoutY="341.0" prefHeight="45.0" prefWidth="303.0" styleClass="textPane" stylesheets="@assests/styls/FirstLogin.css">
+         <children>
+            <TextField fx:id="txtUnitPrice" layoutX="14.0" layoutY="10.0" prefHeight="25.0" prefWidth="656.0" styleClass="textField" />
+            <Label layoutX="26.0" layoutY="-8.0" styleClass="textLabel" stylesheets="@assests/styls/FirstLogin.css" text="Unit Price" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnSave" layoutX="617.0" layoutY="487.0" mnemonicParsing="false" onAction="#itemSaveOnAction" prefHeight="39.0" prefWidth="123.0" style="-fx-background-color: #00a800;" styleClass="textPane" stylesheets="@assests/styls/FirstLogin.css" text="Save" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="68.0" layoutY="487.0" mnemonicParsing="false" onAction="#itemDeleteOnAction" prefHeight="39.0" prefWidth="123.0" style="-fx-background-color: #c73333;" styleClass="textPane" stylesheets="@assests/styls/FirstLogin.css" text="Delete" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblItem" layoutX="68.0" layoutY="558.0" prefHeight="339.0" prefWidth="672.0" AnchorPane.bottomAnchor="33.0" AnchorPane.topAnchor="558.0">
+        <columns>
+          <TableColumn prefWidth="135.0" text="Code" />
+            <TableColumn prefWidth="135.0" text="Description" />
+            <TableColumn prefWidth="135.0" text="Pack Size" />
+            <TableColumn prefWidth="135.0" text="Unit Price" />
+            <TableColumn prefWidth="131.0" text="Qty On Hand" />
+        </columns>
+      </TableView>
+      <Label layoutX="303.0" layoutY="14.0" prefHeight="32.0" prefWidth="142.0" text="Manage Item" underline="true" AnchorPane.leftAnchor="303.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

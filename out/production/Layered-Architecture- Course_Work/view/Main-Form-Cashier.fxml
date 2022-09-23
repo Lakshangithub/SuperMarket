@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainFormAnchor" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormCashierController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5ccc8" height="500.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
+      <ImageView fitHeight="295.0" fitWidth="311.0" layoutX="221.0" layoutY="-99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/DashBordImage/output-onlinepngtools%20(1).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="168.0" layoutY="93.0" text="Super Market Management System" underline="true">
+         <font>
+            <Font name="Bodoni MT Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="34.0" layoutY="133.0" prefHeight="0.0" prefWidth="632.0" />
+      <Label fx:id="lblMenu" alignment="CENTER" layoutX="98.0" layoutY="401.0" prefHeight="32.0" prefWidth="504.0" text="Welcome" textAlignment="CENTER" textFill="#0a39f7">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" layoutX="102.0" layoutY="433.0" prefHeight="17.0" prefWidth="497.0" text="Please select one of above main operations to proceed">
+         <font>
+            <Font name="Ubuntu" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="btnBack" fitHeight="50.0" fitWidth="50.0" layoutX="36.0" layoutY="14.0" onMouseEntered="#backMouseEntered" onMouseExited="#backMouseExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/DashBordImage/th-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCustomer" fitHeight="100.0" fitWidth="100.0" layoutX="118.0" layoutY="233.0" onMouseClicked="#imgMouseClicked" onMouseEntered="#imgMouseEnterAnimation" onMouseExited="#imgMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="118.0">
+         <image>
+            <Image url="@assests/DashBordImage/rating.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgOrder" fitHeight="90.0" fitWidth="90.0" layoutX="306.0" layoutY="238.0" onMouseClicked="#imgMouseClicked" onMouseEntered="#imgMouseEnterAnimation" onMouseExited="#imgMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="172.0" AnchorPane.rightAnchor="304.0">
+         <image>
+            <Image url="@assests/DashBordImage/shopping-bag.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgSearchOrder" fitHeight="90.0" fitWidth="90.0" layoutX="493.0" layoutY="238.0" onMouseClicked="#imgMouseClicked" onMouseEntered="#imgMouseEnterAnimation" onMouseExited="#imgMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/DashBordImage/order-tracking.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
